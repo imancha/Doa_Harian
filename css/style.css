@@ -1,11 +1,21 @@
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
+@import url(http://fonts.googleapis.com/css?family=Comfortaa);
+@import url(./fonts/KacstBook/stylesheet.css);
+
 /* ==============================================
 Basic
 =============================================== */
 body {
 	font-size: 15px;
 	font-family: 'Open Sans', sans-serif;
-	background-image: url(../img/background.jpg);
+	background: url(../img/background.jpg) top no-repeat #94E3F4;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 150s linear infinite;
+	-ms-animation: animatedBackground 150s linear infinite;
+	-moz-animation: animatedBackground 150s linear infinite;
+	-webkit-animation: animatedBackground 150s linear infinite;
 }
 ol, ul, li {
 	margin: 0;
@@ -103,13 +113,14 @@ Navbar
 .navbar {
 	border: 0;
 	bottom: -50px;
-	background: #34495e;	
+	background: #34495e;
+	z-index: 999999999999999999999999999999;
 }
 .navbar-header,
 .navbar-brand {
 	text-align: center !important;
 	float: none !important;
-	margin-top: 15px;	
+	margin-top: 10px;	
 }
 .navbar-default .navbar-nav li a {
 	color: #FFFFFF;
@@ -155,10 +166,6 @@ Tile
 	transition: all 0.2s ease-in-out;
 	z-index: 10;
 }
-.tile-item a,
-.tile-item a:hover {
-	color: #ffffff;
-}
 .tile-item:hover {	
 	color: #ffffff;
 	-webkit-box-shadow: 0px 0px 4px 4px #858585;
@@ -172,22 +179,22 @@ Tile
 					transform: scale(1.05);	
 	z-index: 999999999;	
 }
-.tile-item i {
+.tile-item .img {
 	display: block;
-	padding-top: 2%;	
+	padding: 1px;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-ms-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
-.tile-item:hover i {
-	-webkit-transform: scale(1) rotate(360deg);
-	-moz-transform: scale(1) rotate(360deg);
-	-ms-transform: scale(1) rotate(360deg);
-	-o-transform: scale(1) rotate(360deg);
-	transform: scale(1) rotate(360deg);	
-	z-index: -99999999999;
+.tile-item:hover .img {
+	-webkit-transform: scale(1) rotate(356deg);
+	-moz-transform: scale(1) rotate(356deg);
+	-ms-transform: scale(1) rotate(356deg);
+	-o-transform: scale(1) rotate(356deg);
+	transform: scale(1) rotate(356deg);	
+	z-index: -99999999999;	
 }
 .tile-nav {
 	width: 100%;
@@ -212,6 +219,7 @@ Tile
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: normal;
 	display: block;
+	color: #004AB3;
 	position: absolute;	
 	bottom: 0px;
 	left: 0px;
@@ -220,10 +228,12 @@ Tile
 	overflow: hidden;
 	z-index: 999999999999;
 }
-.brick {
-	cursor: default;
-	padding: 15px;
-	margin-top: 30px;
+.tile:hover .ascensorLink .h5 {	
+	font-weight: bold;
+}
+.brick {	
+	padding: 0 15px;
+	margin-top: 5px;
 	text-align: center;
 	border: 1px solid #D7D8D9;
 	background: #f0f1f2;
@@ -264,11 +274,59 @@ Tile
 .brick .border {
 	border-bottom: 1px solid #FDFDFD;
 }
+.judul {
+	font-family: 'Rancho', sans-serif;
+	font-size: 2.5em;
+	padding: 15px;
+}
 .arab {	
-	font-family: 'Droid Arabic Naskh', serif;
+	font-family: 'KacstBook';
+	font-size: 2.7em;
 	line-height: 2;
 	color: #000000;
+	margin-top: 0px;
+}
+.baca {
+	font-family: 'Josefin Sans', sans-serif;
+	margin-top: 0px;
+}
+.arti {
+	font-family: 'Comfortaa', cursive;
+	margin-top: 0px;
+	color: #4D4D4D;
 }
 .line {
 	line-height: 1.5;
+}
+@keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-ms-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+@-moz-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
 }

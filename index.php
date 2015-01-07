@@ -1,8 +1,8 @@
 <!--
 /*
- * index.html
+ * index.php
  * 
- * Copyright 2014 Imancha <imancha_266@ymail.com>
+ * Copyright 2015 Imancha <imancha_266@ymail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -41,22 +41,22 @@
     <!-- Ionicons -->
     <link href="css/ionicons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->    
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>      
+    <![endif]-->
   </head>
 
   <body>
 		<nav class="navbar navbar-fixed-bottom navbar-default" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="ascensorLinkPrev navbar-brand"><i class="glyphicon glyphicon-arrow-left"></i></a>
-					<a class="ascensorLink ascensorLink0 navbar-brand home-link"><i class="glyphicon glyphicon-home"></i></a>					
-					<a class="ascensorLinkNext navbar-brand"><i class="glyphicon glyphicon-arrow-right"></i></a>
+					<a class="ascensorLinkPrev navbar-brand"> <i class="glyphicon glyphicon-arrow-left fa-fw fa-2x"></i> </a>
+					<a class="ascensorLink ascensorLink0 navbar-brand home-link"> <i class="glyphicon glyphicon-home fa-fw fa-2x"></i> </a>					
+					<a class="ascensorLinkNext navbar-brand"> <i class="glyphicon glyphicon-arrow-right fa-fw fa-2x"></i> </a>
 				</div>				
 			</div>
 		</nav>
@@ -68,9 +68,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/main.js"></script>
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script src="js/jquery.ascensor.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/script.js"></script>		
-				
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.awesome-cursor.min.js"></script>
+		<script src="js/jquery.ascensor.js"></script>		
+		<script src="js/script.js"></script>
 	</body>
 </html>

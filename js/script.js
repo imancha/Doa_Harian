@@ -2,6 +2,12 @@
 jQuery
 =============================================== */
 $(document).ready(function () {
+	$('body *').awesomeCursor('fa fa-twitter', {
+		color: '#FFA500',
+		size: '40',
+		outline: '#2cb2da',
+		flip: 'horizontal'
+	});
 	
 	$("[href='#']").click(function(e){
 		e.preventDefault();
@@ -29,14 +35,14 @@ $(document).ready(function () {
 								 [13,0],[14,0],[15,0],[16,0],[17,0],[18,0],
 								 [19,0],[20,0],[21,0],[22,0],[23,0],[24,0],
 								 [25,0],[26,0]]
-*/
+
 		ascensorMap:[[0,0],
 								 [0,1],[0,2],[0,3],[0,4],[0,5],[0,6],
 								 [0,7],[0,8],[0,9],[0,10],[0,11],[0,12],
 								 [0,13],[0,14],[0,15],[0,16],[0,17],[0,18],
 								 [0,19],[0,20],[0,21],[0,22],[0,23],[0,24],
 								 [0,25],[0,26]]
-
+*/
 	})	
 });
 
@@ -44,5 +50,5 @@ $(document).ready(function () {
 Loading
 =============================================== */
 $(window).load(function(){
-	jQuery('#loading').fadeOut(1000);
+	jQuery('#loading').fadeOut(1000);	
 });

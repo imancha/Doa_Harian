@@ -20,7 +20,7 @@
  * MA 02110-1301, USA.
  * 
  * 
- */	
+ */
 
 	/*	Connect to database	*/
 	function mysql_open(){
@@ -42,11 +42,11 @@
 			echo '<section class="section home">						
 							<div class="row">';
 			while($row = mysql_fetch_array($res)){
-				echo '	<div class="col-xs-6 col-sm-3 col-md-2 padding">
+				echo '	<div class="col-xs-12 col-sm-3 col-md-2 padding">
 									<div class="tile tile-item bg-aqua">
 										<a class="ascensorLink ascensorLink'.++$i.' tile-nav">
 											<h5 class="h5">'.$row['nama'].'</h5>
-											<i class="glyphicon glyphicon-home"></i>										
+											<span><img class="img" width="100%" src="./img/1.png"></span>										
 										</a>
 									</div>
 								</div>';
@@ -67,19 +67,19 @@
 			while($row = mysql_fetch_array($res)){
 				echo '<section class="section doa-'.$row['id'].'">
 								<div class="container">
-									<h1 class="h2 lead">'.$row['nama'].'</h1>									
+									<h1 class="h2 lead judul" style="margin-bottom:0px">'.$row['nama'].'</h1>									
 									<div class="row">										
 										<div class="col-xs-12">
 											<div class="brick">
-												<h3 class="h3 border arab">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ</h3>
+												<h3 class="h3 border arab" style="font-size:1.75em">بِسْمِ اللهِ الرَّحْمنِ الرَّحِيْمِ</h3>
 												<div class="padding">													
 													<h2 class="h2 lead arab">'.$row['arab'].'</h2>
 												</div>
 												<div class="padding">
-													<h3 class="text-muted line"><i>'.$row['baca'].'</i></h3>
+													<h3 class="text-muted line baca"><i>'.$row['baca'].'</i></h3>
 												</div>
 												<div class="padding">
-													<h3 class="line">'.$row['arti'].'</h3>
+													<h3 class="line arti">'.$row['arti'].'</h3>
 												</div>												
 											</div>
 										</div>

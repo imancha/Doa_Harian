@@ -24,11 +24,16 @@ author: LÃ©o Galley <contact@kirkas.ch>
         // Specify the child type if there are no 'div'
         windowsOn: 0,
         // Choose the floor to start on
-        direction: "chocolate",
+        direction: "x",
         // specify if direction is x,y or chocolate
-        loop: !0,
+        loop: !1,
         // specify if direction is x,y or chocolate
-        ascensorMap: "",
+        ascensorMap: [[0,0],
+								 [1,0],[2,0],[3,0],[4,0],[5,0],[6,0],
+								 [7,0],[8,0],[9,0],[10,0],[11,0],[12,0],
+								 [13,0],[14,0],[15,0],[16,0],[17,0],[18,0],
+								 [19,0],[20,0],[21,0],[22,0],[23,0],[24,0],
+								 [25,0],[26,0]],
         // If you choose chocolate for direction, speficy position
         time: "1000",
         // Specify speed of transition
