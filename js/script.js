@@ -8,6 +8,16 @@ $(document).ready(function () {
 		outline: '#2cb2da',
 		flip: 'horizontal'
 	});
+
+	/*==== METROMEGA SIDEBAR ====*/
+	$('#opensidebar i').hover(function() {
+			$('#sidebar').show(0).animate({'right': '0px'});
+	});
+	$('#sidebar').mouseleave(function() {
+			$('#sidebar').animate({'right': '-120px'}, function() {
+					$(this).css({'display': 'none'});
+			});
+	});
 	
 	$("[href='#']").click(function(e){
 		e.preventDefault();
@@ -28,7 +38,7 @@ $(document).ready(function () {
 		}
 	})
 
-	$("#ascensor").ascensor({
+	$("#ascensor").ascensor({		
 /*		ascensorMap:[[0,0],
 								 [1,0],[2,0],[3,0],[4,0],[5,0],[6,0],
 								 [7,0],[8,0],[9,0],[10,0],[11,0],[12,0],

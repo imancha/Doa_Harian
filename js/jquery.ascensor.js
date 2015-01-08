@@ -24,16 +24,17 @@ author: LÃ©o Galley <contact@kirkas.ch>
         // Specify the child type if there are no 'div'
         windowsOn: 0,
         // Choose the floor to start on
-        direction: "x",
+        direction: "chocolate",
         // specify if direction is x,y or chocolate
         loop: !1,
         // specify if direction is x,y or chocolate
-        ascensorMap: [[0,0],
-								 [1,0],[2,0],[3,0],[4,0],[5,0],[6,0],
-								 [7,0],[8,0],[9,0],[10,0],[11,0],[12,0],
-								 [13,0],[14,0],[15,0],[16,0],[17,0],[18,0],
-								 [19,0],[20,0],[21,0],[22,0],[23,0],[24,0],
-								 [25,0],[26,0]],
+        ascensorMap:[
+										 [0,0],
+										 [0,1],[1,2],[0,3],[0,4],[1,5],[0,6],
+										 [0,7],[1,8],[0,9],[0,10],[1,11],[0,12],
+										 [0,13],[1,14],[0,15],[0,16],[1,17],[0,18],
+										 [0,19],[1,20],[0,21],[0,22],[1,23],[0,24]										 
+										 ],
         // If you choose chocolate for direction, speficy position
         time: "1000",
         // Specify speed of transition
@@ -41,9 +42,9 @@ author: LÃ©o Galley <contact@kirkas.ch>
         // Specify easing option
         keyNavigation: !1,
         // choose if you want direction key support
-        queued: !1,
+        queued: 1,
         // choose if you want direction scroll queued
-        queuedDirection: "x",
+        queuedDirection: "y",
         // choose if you want direction scroll queued "x" or "y" (default : "x")
         overflow: "hidden"
     };

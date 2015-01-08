@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans);
 @import url(http://fonts.googleapis.com/css?family=Comfortaa);
+@import url(http://fonts.googleapis.com/css?family=Monda);
 @import url(./fonts/KacstBook/stylesheet.css);
 
 /* ==============================================
@@ -85,7 +86,6 @@ a, a:hover {
 	max-width: 90%;
 	padding-bottom: 70px;
 }
-
 #loading {
 	top: 0;	
 	width: 100%;
@@ -101,7 +101,7 @@ a, a:hover {
 	padding: 0;
 }
 .padding {
-	padding: 0.4% !important;
+	padding: 0.5% !important;
 }
 .bg-aqua {
   background-color: #00C0EF !important;
@@ -114,7 +114,7 @@ Navbar
 	border: 0;
 	bottom: -50px;
 	background: #34495e;
-	z-index: 999999999999999999999999999999;
+	z-index: 9999999999999999999999999;
 }
 .navbar-header,
 .navbar-brand {
@@ -142,7 +142,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 Tile
 =============================================== */
 .home .row {
-	margin: 3%;
+	margin: 10px 5%;
 }
 .tile {	
 	width: 100%;	
@@ -189,11 +189,11 @@ Tile
 	transition: all 0.4s ease;
 }
 .tile-item:hover .img {
-	-webkit-transform: scale(1) rotate(356deg);
-	-moz-transform: scale(1) rotate(356deg);
-	-ms-transform: scale(1) rotate(356deg);
-	-o-transform: scale(1) rotate(356deg);
-	transform: scale(1) rotate(356deg);	
+	-webkit-transform: scale(0.8) rotate(354deg);
+	-moz-transform: scale(0.8) rotate(354deg);
+	-ms-transform: scale(0.8) rotate(354deg);
+	-o-transform: scale(0.8) rotate(354deg);
+	transform: scale(0.8) rotate(354deg);	
 	z-index: -99999999999;	
 }
 .tile-nav {
@@ -216,17 +216,25 @@ Tile
 .tile .ascensorLink .h5 {
 	margin: 5px;
 	font-size: 16px;	
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Monda', sans-serif;
 	font-weight: normal;
 	display: block;
-	color: #004AB3;
+	color: #444;
+  text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
 	position: absolute;	
 	bottom: 0px;
 	left: 0px;
 	right: 0px;	
 	text-transform: uppercase;
 	overflow: hidden;
-	z-index: 999999999999;
+	z-index: 999999999999;	 
 }
 .tile:hover .ascensorLink .h5 {	
 	font-weight: bold;
@@ -298,35 +306,101 @@ Tile
 .line {
 	line-height: 1.5;
 }
+/*==== 4.2. Metromega Sidebar ====*/
+#sidebar{
+	width:80px; 
+	height:100%; 
+	display:none; 
+	float:right; 
+	right:-120px; 
+	top:0; 
+	position:fixed; 
+	z-index:9999999999999999999; 
+	background:#232323;
+}
+#sidebar ul{
+	list-style:none;
+}
+#sidebar ul li{
+	height:80px;
+	width:80px;
+	line-height:80px;
+	text-align:center;	
+}
+#sidebar ul li a{
+	height:100%;
+	width:100%;
+	line-height:80px;
+	display:block;
+	-webkit-transition: all 0.5s ease; 
+	-moz-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease; 
+	transition: all 0.5s ease; 
+}
+#sidebar ul li a:hover{
+	background:#404040;
+}
+#sidebar ul li a i{
+	line-height:80px;
+	-webkit-transition: all 0.5s ease; 
+	-moz-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease; 
+	transition: all 0.5s ease; 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-moz-opacity: 0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+}
+#sidebar ul li a:hover i{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
+
+#opensidebar{
+	text-align:center;
+	display:block; 
+	position:absolute; 
+	right:15px; 
+	top:10px;
+	z-index:99999999999999;	
+}
+#opensidebar i{
+	display:block;	
+	border-radius: 5em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+	-webkit-transition: all 0.5s ease; 
+	-moz-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease; 
+	transition: all 0.5s ease; 
+}
+#opensidebar i:hover{	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+}
 @keyframes animatedBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
 @-webkit-keyframes animatedBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
 @-ms-keyframes animatedBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
 @-moz-keyframes animatedBackground {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: 100% 0;
-    }
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
 }
