@@ -62,16 +62,10 @@
 		</nav>
 		<div id="loading"></div>
 		<div id="ascensor"></div>
-		<!-- SIDEBAR --
-		<div id="opensidebar"><i class="fa fa-twitter fa-3x"></i></div>
-		<section id="sidebar" class="htmltile">
-				<ul>
-						<li></li>
-						<li><a href="#" title=""><i class="fa fa-lightbulb-o fa-3x"></i></a></li>
-						<li><a href="#" title=""><i class="fa fa-smile-o fa-3x"></i></a></li>
-				</ul>
-		</section>
-		<!-- /SIDEBAR -->
+		<div id="quiz"></div>
+		<div id="info"></div>
+		<div id="tright" data-toggle="tooltip" data-placement="bottom" data-original-title="Quiz" onclick="quiz()"><button class="btn"><i class="fa fa-lightbulb-o fa-4x"></i></button></div>		
+		<div id="bleft" data-toggle="tooltip" data-placement="top" data-original-title="Info" onclick="info()"><button class="btn"><i class="fa fa-info fa-3x"></i></button></div>		
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

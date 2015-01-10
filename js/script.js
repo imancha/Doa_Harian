@@ -2,33 +2,28 @@
 jQuery
 =============================================== */
 $(document).ready(function () {
-	$('body *').awesomeCursor('fa fa-twitter', {
+	$('body *, .btn').awesomeCursor('fa fa-twitter', {
 		color: '#FFA500',
 		size: '40',
 		outline: '#2cb2da',
 		flip: 'horizontal'
 	});
-
-	/*==== METROMEGA SIDEBAR ====*/
-	$('#opensidebar i').hover(function() {
-			$('#sidebar').show(0).animate({'right': '0px'});
-	});
-	$('#sidebar').mouseleave(function() {
-			$('#sidebar').animate({'right': '-120px'}, function() {
-					$(this).css({'display': 'none'});
-			});
-	});
 	
 	$("[href='#']").click(function(e){
 		e.preventDefault();
 	});
+
+	//Activate tooltips
+  $("[data-toggle='tooltip']").tooltip();
 	
 	// show, hide navbar
 	$(".tile").click(function(){
-		$(".navbar").animate({bottom:0},"slow");
+		$(".navbar").animate({bottom:0},"slow");		
+		$("#bleft").animate({bottom:50},"slow");
 	}); 
 	$(".home-link").click(function(){
 		$(".navbar").animate({bottom:-50},"slow");
+		$("#bleft").animate({bottom:4},"slow");
 	}); 
 
 	// navbar-callapse close on click
@@ -37,6 +32,18 @@ $(document).ready(function () {
 			$('.navbar-collapse').collapse('hide');
 		}
 	})
+
+	$("#quiz").toggle();
+	$("#tright").click(function(){
+		$("#ascensor").toggle("slow");
+		$("#quiz").toggle("slow");		
+	});
+
+	$("#info").toggle();
+	$("#bleft").click(function(){
+		$("#ascensor").slideToggle("slow");
+		$("#info").fadeToggle("slow");		
+	});
 
 	$("#ascensor").ascensor({		
 /*		ascensorMap:[[0,0],

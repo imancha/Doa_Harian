@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 29, 2014 at 02:19 AM
+-- Generation Time: Jan 11, 2015 at 02:35 AM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -27,13 +27,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `doa` (
-  `id` int(11) NOT NULL,
-  `nama` text,
-  `arab` text CHARACTER SET utf8,
-  `baca` text,
-  `arti` text,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` text CHARACTER SET latin1,
+  `arab` text,
+  `baca` text CHARACTER SET latin1,
+  `arti` text CHARACTER SET latin1,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `doa`
@@ -65,7 +65,59 @@ INSERT INTO `doa` (`id`, `nama`, `arab`, `baca`, `arti`) VALUES
 (23, 'Doa Sebelum Belajar', 'رَبِّ زِدْنِى عِلْمًا وَارْزُقْنِى فَهْمًا', 'robbi zidnii ''ilmaa warzuqnii fahmaa', 'Ya Allah! Tambahkanlah kepadaku ilmu dan berilah aku pegertian yang baik'),
 (24, 'Doa Ketika Lupa', 'سُبْحَانَ مَنْ لَا يَنَامُ وَلَا يَسْهُوْ', 'subhaana man laa yanaamu wa laa yashuu', 'Maha suci dzat yang tidak tidur dan tidak lupa'),
 (25, 'Doa Mohon Diberi Kecerdasan Berfikir', 'اَللّهُمَّ اَلْهِمْنِى رُشْدِى وَاَعِذْنِى مِنْ شَرِّ نَفْسِى', 'alloohumma alhimnii rusydii wa a''idznii min syarri nafsii', 'Ya Allah! Ilhamkanlah kepadaku kecerdasan dan lindungilah aku dari kejahatan nafsuku'),
-(26, 'Doa Ketika Ada Petir', 'اَللّهُمَّ لَا تَقْتُلْنَا بِغَضَبِكَ وَلَا تُهْلِكْنَا بِعَذَابِكَ وَعَافِنَا قَبْلَ ذلِكَ', 'allhohumma laa taqtulnaa bighodhobika wa laa tuhlik naa bi''adzaabika wa''aafinaa qobla dzaalika', 'Ya Allah! Janganlah Engkau bunuh kami dengan kemurkaan-Mu, janganlah Engkau binasakan dengan siksaan-Mu, dan selamatkanlah kami sebelum kejadian ini');
+(26, 'Doa Ketika Ada Petir', 'اَللّهُمَّ لَا تَقْتُلْنَا بِغَضَبِكَ وَلَا تُهْلِكْنَا بِعَذَابِكَ وَعَافِنَا قَبْلَ ذلِكَ', 'allhohumma laa taqtulnaa bighodhobika wa laa tuhlik naa bi''adzaabika wa''aafinaa qobla dzaalika', 'Ya Allah! Janganlah Engkau bunuh kami dengan kemurkaan-Mu, janganlah Engkau binasakan dengan siksaan-Mu, dan selamatkanlah kami sebelum kejadian ini'),
+(27, 'Doa Setelah Belajar', 'اَللّهُمَّ اَرِنَا الْحَقَّ حَقًّا وَارْزُقْنَا اتِّبَاعَهُ وَاَرِنَا الْبَاطِلَ بَاطِلًا وَارْزُقْنَا اجْتِنَابَهُ', 'Allahumma arinal haqqo haqqon warzuqnat tibaa''ah wa arinal baathila baathilan warzuqnaj tinaabah', 'Ya Allah! Tunjukkanlah kepada kami kebenaran sehingga kami dapat mengikutinya dan tunjukkanlah kepada kami kejelekan sehingga kami dapat menjauhinya'),
+(28, 'Doa Naik Kendaraan Darat', 'سُبْحَانَ الَّذِى سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِيْنَ وَاِنَّا اِلَى رَبِّنَا لَمُنْقَلِبُوْنَ', 'Subhaanal ladzii sakh-khoro lanaa haadzaa wamaa kunnaa lahuu muqriniin wa innaa ilaa robbinaa lamungqolibuun', 'Maha Suci (Tuhan)yang telah menundukkan semua ini bagi kami padahal kami sebelumnya tidak mampu menguasainya dan sesungguhnya kami akan kembali kepada Tuhan kami'),
+(29, 'Doa Naik Kendaraan Laut dan Pesawat Terbang', 'بِسْمِ اللهِ مَجْرَاهَا وَمُرْسَاهَا', 'Bismillaahi majreehaa wa mursaahaa', 'Dengan menyebut nama Allah di waktu berlayar dan berlabuhnya'),
+(30, 'Doa Ketika Menghadapi Kesusahan', 'اَللّهُمَّ ﻻَ سَهْلَ اِلَّا مَا جَعَلْتَهُ سَهْلًا وَاَنْتَ تَجْعَلُ الْحَجْنَ اِذَا شِئْتَ سَهْلًا', 'Allahumma laa sahla illaa maa ja''altahuu sahlan wa anta taj''alulhajna idzaa syi''ta sahlan', 'Ya Allah, tidak ada kemudahan kecuali apa yang Engkau jadikan mudah. Dan apabila Engkau berkehendak, Engkau akan menjadikan kesusahan menjadi kemudahan'),
+(31, 'Doa Ketika Marah', 'اَللّهُمَّ اغْفِرْلِى ذَنْبِى وَاَذْهِبْ غَيْظَ قَلْبِى وَآجِرْنِى مِنَ الشَّيْطَانِ الرَّجِيْمِ', 'Allahummaghfirlii dzambii wa adzhib ghoidzho qolbii wa aajirnii minasy syaithoonirrojiim', 'Wahai Tuhanku, ampunilah dosaku dan hilangkanlah akan kepanasan hatiku serta lepaskanlah aku dari godaan syetan yang terkutuk');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kuis`
+--
+
+CREATE TABLE IF NOT EXISTS `kuis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `soal` text NOT NULL,
+  `keterangan` text NOT NULL,
+  `a` varchar(255) NOT NULL,
+  `b` varchar(255) NOT NULL,
+  `c` varchar(255) NOT NULL,
+  `jawaban` char(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+
+--
+-- Dumping data for table `kuis`
+--
+
+INSERT INTO `kuis` (`id`, `soal`, `keterangan`, `a`, `b`, `c`, `jawaban`) VALUES
+(1, 'بِسْمِكَ اللّهُمَّ اَحْيَا وَاَمُوْتُ', 'Doa tersebut dibaca ketika. . .', 'Akan Tidur', 'Bercermin', 'Bangun Tidur', 'a'),
+(2, 'اَلْحَمْدُ لِلّهِ الَّذِيْ اَحْيَانَا بَعْدَ مَا اَمَاتَنَا وَاِلَيْهِ النُّشُوْرِ', 'Doa tersebut dibaca ketika. . .', 'Membuka Pakaian', 'Bangun Tidur', 'Akan Tidur', 'b'),
+(3, 'بِسْمِ اللّهِ الَّذِى لَا اِلهَ اِلَّا هُوَ', 'Doa tersebut dibaca ketika. . .', 'Bercermin', 'Memakai Pakaian Baru', 'Membuka Pakaian', 'c'),
+(4, 'اَللّهُمَّ اِنِّى اَعُوْذُبِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ', 'Doa tersebut dibaca ketika. . .', 'Masuk Rumah', 'Masuk WC', 'Keluar WC', 'b'),
+(5, 'اَلْحَمْدُ لِلّهِ الَّذِى اَذْهَبَ عَنِّى الْاَذَى وَعَافنِى', 'Doa tersebut dibaca ketika. . .', 'Keluar WC', 'Keluar Rumah', 'Masuk WC', 'a'),
+(6, 'اَلْحَمْدُ لِلّهِ الَّذِى جَعَلَ الْمَاءَ طَهُوْرًا', 'Doa tersebut dibaca ketika. . .', 'Hujan Turun', 'Sebelum Berwudlu', 'Sesudah Makan dan Minum', 'b'),
+(7, 'اَلْحَمْدُ لِلّهِ الَّذِى كَسَانِى هذَا وَرَزَقَنِيْهِ مِنْ غَيْرِ حَوْلٍ مِنِّى وَلَا قُوَّةٍ', 'Doa tersebut dibaca ketika. . .', 'Bercermin', 'Membuka Pakaian', 'Memakai Pakaian Baru', 'c'),
+(8, 'اَلْحَمْدُ لِلّهِ كَمَا حَسَنْتَ خَلْقِى فَحَسِّنْ خُلُقِى', 'Doa tersebut dibaca ketika. . .', 'Membuka Pakaian', 'Bercermin', 'Memakai Pakaian Baru', 'b'),
+(9, 'اَللَهُمَّ بَارِكْ لَنَا فِيْمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ', 'Doa tersebut dibaca ketika. . .', 'Menghadapi Hidangan', 'Sesudah Makan dan Minum', 'Masuk Masjid', 'a'),
+(10, 'اَلْحَمْدُ لِلّهِ الَّذِيْ اَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِيْنَ', 'Doa tersebut dibaca ketika. . .', 'Menghadapi Hidangan', 'Sesudah Makan dan Minum', 'Keluar Masjid', 'b'),
+(11, 'اَللّهُمَّ اِنِّى اَسْأَلَُكَ خَيْرَالْمُوْلَجِ وَخَيْرَ الْمُخْرَجِ بِسْمِ اللهِ وَلَجْنَا وَبِسْمِ اللهِ خَرَجْنَا وَعَلَى اللهِ تَوَكَّلْنَا', 'Doa tersebut dibaca ketika. . .', 'Keluar Masjid', 'Keluar Rumah', 'Masuk Rumah', 'c'),
+(12, 'بِسْمِ اللّهِ تَوَكَّلْتُ عَلَى اللّهِ لَاحَوْلَ وَلَا قُوَّةَ اِلَّا بِاللّهِ', 'Doa tersebut dibaca ketika. . .', 'Masuk Masjid', 'Keluar Rumah', 'Masuk Rumah', 'b'),
+(13, 'اَللّهُمَّ اغْفِرْلِيْ ذُنُوْبِى وَافْتَحْ لِى اَبْوَابَ رَحْمَتِكَ', 'Doa tersebut dibaca ketika. . .', 'Masuk Masjid', 'Keluar Rumah', 'Keluar Masjid', 'a'),
+(14, 'اَللّهُمَّ افْتَحْ لِيْ اَبْوَابَ فَضْلِكَ', 'Doa tersebut dibaca ketika. . .', 'Masuk Rumah', 'Keluar Masjid', 'Masuk Masjid', 'b'),
+(15, 'اَللّهُمَّ اغْفِرْ لِى وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِى صَغِيْرًا', 'Doa tersebut dibaca ketika. . .', 'Sebelum Belajar', 'Setelah Belajar', 'Memohon Ampunan Untuk Diri Sendiri dan Kedua Orang Tua', 'c'),
+(16, 'اَللّهُمَّ صَيِّبًا نَافِعًا', 'Doa tersebut dibaca ketika. . .', 'Naik Kendaraan Darat', 'Hujan Turun', 'Ada Petir', 'b'),
+(17, 'رَبِّ زِدْنِى عِلْمًا وَارْزُقْنِى فَهْمًا', 'Doa tersebut dibaca ketika. . .', 'Sebelum Belajar', 'Memohon Ampunan Untuk Diri Sendiri dan Kedua Orang Tua', 'Setelah Belajar', 'a'),
+(18, 'سُبْحَانَ مَنْ لَا يَنَامُ وَلَا يَسْهُوْ', 'Doa tersebut dibaca ketika. . .', 'Marah', 'Lupa', 'Menghadapi Kesusahan', 'b'),
+(19, 'اَللّهُمَّ لَا تَقْتُلْنَا بِغَضَبِكَ وَلَا تُهْلِكْنَا بِعَذَابِكَ وَعَافِنَا قَبْلَ ذلِكَ', 'Doa tersebut dibaca ketika. . .', 'Hujan Turun', 'Marah', 'Ada Petir', 'c'),
+(20, 'اَللّهُمَّ اَرِنَا الْحَقَّ حَقًّا وَارْزُقْنَا اتِّبَاعَهُ وَاَرِنَا الْبَاطِلَ بَاطِلًا وَارْزُقْنَا اجْتِنَابَهُ', 'Doa tersebut dibaca ketika. . .', 'Memohon Ampunan Untuk Diri Sendiri dan Kedua Orang Tua', 'Setelah Belajar', 'Sebelum Belajar', 'b'),
+(21, 'سُبْحَانَ الَّذِى سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِيْنَ وَاِنَّا اِلَى رَبِّنَا لَمُنْقَلِبُوْنَ', 'Doa tersebut dibaca ketika. . .', 'Naik Kendaraan Darat', 'Naik Kendaraan Laut dan Pesawat Terbang', 'Hujan Turun', 'a'),
+(22, 'بِسْمِ اللهِ مَجْرَاهَا وَمُرْسَاهَا', 'Doa tersebut dibaca ketika. . .', 'Hujan Turun', 'Naik Kendaraan Laut dan Pesawat Terbang', 'Naik Kendaraan Darat', 'b'),
+(23, 'اَللّهُمَّ ﻻَ سَهْلَ اِلَّا مَا جَعَلْتَهُ سَهْلًا وَاَنْتَ تَجْعَلُ الْحَجْنَ اِذَا شِئْتَ سَهْلًا', 'Doa tersebut dibaca ketika. . .', 'Lupa', 'Marah', 'Menghadapi Kesusahan', 'c'),
+(24, 'اَللّهُمَّ اغْفِرْلِى ذَنْبِى وَاَذْهِبْ غَيْظَ قَلْبِى وَآجِرْنِى مِنَ الشَّيْطَانِ الرَّجِيْمِ', 'Doa tersebut dibaca ketika. . .', 'Lupa', 'Marah', 'Menghadapi Kesusahan', 'b');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
