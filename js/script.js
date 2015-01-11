@@ -35,13 +35,13 @@ $(document).ready(function () {
 
 	$("#quiz").toggle();
 	$("#tright").click(function(){
-		$("#ascensor").toggle("slow");
+		$("#ascensor").toggle("slow").delay("slow");
 		$("#quiz").toggle("slow");		
 	});
 
 	$("#info").toggle();
 	$("#bleft").click(function(){
-		$("#ascensor").slideToggle("slow");
+		$("#ascensor").slideToggle("slow").delay("slow");
 		$("#info").fadeToggle("slow");		
 	});
 

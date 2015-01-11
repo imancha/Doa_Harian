@@ -397,6 +397,16 @@ Tile
 	text-align: center;
 	font-size: 5em;
 }
+.refresh {
+	text-align: center;
+	width: inherit;
+}
+.refresh .btn {
+	background: none repeat scroll 0% 0% transparent;
+	outline: none;
+	line-height: inherit;
+	color: #800080;
+}
 .team-member {
 	max-width: 100%;
 	margin-top: 20px;
@@ -463,6 +473,8 @@ Tile
 .footer {
 	text-align: center;
 	font-size: smaller;
+	position: relative;
+	bottom: 5px;
 }
 @keyframes animatedBackground {
 	from { background-position: 0 0; }

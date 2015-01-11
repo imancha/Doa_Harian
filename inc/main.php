@@ -86,6 +86,12 @@
 											</div>
 										</div>
 									</div>
+									<div class="row">
+										<div class="refresh">											
+											<audio id="music'.$row['id'].'"><source src="./mp3/'.$row['id'].'.mp3" type="audio/mp3"></audio>																							
+											<button class="btn" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio" onclick="play('.$row['id'].')"><i id="stateicon'.$row['id'].'" class="fa fa-volume-up fa-3x"></i></button>
+										</div>
+									</div>
 								</div>
 							</section>';
 			}
@@ -96,7 +102,7 @@
 	function quiz(){
 		mysql_open();
 		mysql_query("SET CHARACTER SET utf8");
-		$sql = "SELECT * FROM `kuis` WHERE `id`=".rand(1,24)." LIMIT 1";
+		$sql = "SELECT * FROM `kuis` ORDER BY RAND() LIMIT 1";
 		$res = mysql_query($sql) or die(mysql_error());
 		if(mysql_num_rows($res) == 1){
 			$row = mysql_fetch_assoc($res);
@@ -156,6 +162,9 @@
 										</div>
 									</div>
 								</div>
+								<div class="row">
+									<div class="refresh"><button class="btn" data-toggle="tooltip" data-placement="bottom" data-original-title="Ganti Soal" title="Ganti Soal" onclick="quiz()"><i class="fa fa-refresh fa-3x"></i></button></div>
+								</div>
 							</div>
 						</div>';
 		}
@@ -167,7 +176,18 @@
 						<div class="container">
 							<h1 class="h1">Creative Team</h1>
 							<div class="row" style="margin: 0 7%">
-								<div class="col-xs-12 col-sm-4 col-md-4"></div>								
+								<div class="col-xs-12 col-sm-4 col-md-4">
+									<div class="team-member">
+										<img src="./img/dinar.jpg" alt="team_member" />
+										<h3 class="h3 lead">Dinar Priskawati</h3>
+										<h5 class="h5">Developer</h5>
+										<ul class="member-social">
+											<li><a href="https://twitter.com/ImanchaOS" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+											<li><a href="https://www.facebook.com/imancha.os" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+											<li><a href="https://www.google.com/+ImanSyahOS" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
+										</ul>
+									</div>
+								</div>								
 								<div class="col-xs-12 col-sm-4 col-md-4">
 									<div class="team-member">
 										<img src="./img/iman.jpg" alt="team_member" />
@@ -180,7 +200,18 @@
 										</ul>
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-4 col-md-4"></div>
+								<div class="col-xs-12 col-sm-4 col-md-4">
+									<div class="team-member">
+										<img src="./img/ocha.png" alt="team_member" />
+										<h3 class="h3 lead">Rosalina Fazriah</h3>
+										<h5 class="h5">Developer</h5>
+										<ul class="member-social">
+											<li><a href="https://twitter.com/ImanchaOS" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+											<li><a href="https://www.facebook.com/imancha.os" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+											<li><a href="https://www.google.com/+ImanSyahOS" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a></li>
+										</ul>
+									</div>
+								</div>
 							</div>							
 						</div>						
 					</div>

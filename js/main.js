@@ -58,3 +58,12 @@ function info(){
 	xmlhttp.open("GET","./inc/main.php?!=info",true);
 	xmlhttp.send();
 }
+function play(id){
+	var audio = document.getElementById("music"+id);
+	if (audio.paused) {		
+		audio.play();
+	} else {		
+		audio.pause();
+    audio.currentTime = 0;
+	}
+}
